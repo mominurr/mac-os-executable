@@ -27,11 +27,11 @@ jobs:
 
       - name: Run PyInstaller
         run: |
-          python -m PyInstaller qwiklab_badge_checker.spec
+          pyinstaller --onefile main.py
 
       - name: Archive macOS executable
         run: |
-          zip -r qwiklab_badge_checker_mac.zip dist/qwiklab_badge_checker
+          zip -r qwiklab_badge_checker_mac.zip dist/main
 
       - uses: actions/upload-artifact@v2
         with:
