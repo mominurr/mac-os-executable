@@ -35,7 +35,7 @@ jobs:
 
       - name: Copy executable to repository
         run: |
-          cp qwiklab_badge_checker_mac.zip $GITHUB_WORKSPACE
+          cp -f qwiklab_badge_checker_mac.zip $GITHUB_WORKSPACE
 
       - name: Commit and push to repository
         run: |
