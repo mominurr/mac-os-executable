@@ -9,9 +9,6 @@ jobs:
   build-macos:
     runs-on: macos-latest
     steps:
-      - name: Debug - Show Secrets
-        run: |
-          echo "GitHub Token: ${{ secrets.MY_TOKEN }}"
       - name: Checkout
         uses: actions/checkout@v2
 
