@@ -45,8 +45,8 @@ jobs:
           git commit -m "Add macOS executable"
           git push
 
-  - name: Upload macOS executable
-    uses: actions/upload-artifact@v2
-    with:
-      name: macOS_qwiklabs
-      path: qwiklab_badge_checker_mac.zip
+      - name: Upload macOS executable
+        uses: actions/upload-artifact@v2
+        with:
+          name: macOS_qwiklabs
+          path: qwiklab_badge_checker_mac.zip
