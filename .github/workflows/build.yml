@@ -1,5 +1,5 @@
 name: Build Workflow
-# fixed
+
 on:
   push:
     branches:
@@ -46,7 +46,6 @@ jobs:
         with:
           tag_name: ${{ github.sha }}
           release_name: ${{ github.sha }}
-          overwrite: true
           body: |
             Test Release v1.0.0
           draft: false
