@@ -33,18 +33,6 @@ jobs:
         run: |
           zip -r qwiklab_badge_checker_mac.zip dist/main
 
-      - name: Copy executable to repository
-        run: |
-          cp -f qwiklab_badge_checker_mac.zip $GITHUB_WORKSPACE
-
-      - name: Commit and push to repository
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git add qwiklab_badge_checker_mac.zip
-          git commit -m "Add macOS executable"
-          git push
-
       - name: Upload macOS executable
         uses: actions/upload-artifact@v2
         with:
